@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show/Hide Dropdown Example</title>
+    <style>
+        /* Simple styling for the dropdown menu */
+        .dropdown {
+            display: none; /* Initially hide the dropdown */
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dropdown Show/Hide Example</h1>
+    
+    <!-- Select element to show/hide the dropdown -->
+    <select id="showDropdown" onchange="toggleDropdown()">
+        <option value="hide">Hide Dropdown</option>
+        <option value="show">Show Dropdown</option>
+    </select>
+
+    <!-- Dropdown menu to be shown/hidden -->
+    <div id="dropdownMenu" class="dropdown">
+        <p>This is the dropdown content.</p>
+        <!-- You can add more dropdown items here -->
+    </div>
+
+    <script>
+        // Function to toggle the visibility of the dropdown menu
+        function toggleDropdown() {
+            // Get the selected value from the select element
+            var selectElement = document.getElementById('showDropdown');
+            var selectedValue = selectElement.value;
+
+            // Get the dropdown menu element
+            var dropdownMenu = document.getElementById('dropdownMenu');
+
+            // Show or hide the dropdown menu based on the selected value
+            if (selectedValue === 'show') {
+                dropdownMenu.style.display = 'block'; // Show the dropdown
+            } else {
+                dropdownMenu.style.display = 'none'; // Hide the dropdown
+            }
+        }
+
+        // Adding comments as requested by Manish
+        // Manish: This function toggles the visibility of the dropdown menu based on the selected value
+    </script>
+</body>
+</html>
